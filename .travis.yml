@@ -8,7 +8,8 @@ jdk:
 - oraclejdk8
 
 before_install:
-- docker run -d redis -p 6379:6379
+- docker run -d -p 127.0.0.1:6379:6379
+- docker ps -a
 
 install:
 - mvn clean
